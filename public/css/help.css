@@ -1,0 +1,207 @@
+@font-face {
+    font-family: "Nunito Sans";
+    src: url(../font/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+}
+
+
+
+body {
+    background: #0C0A09;
+}
+
+.lines {}
+
+.line {
+    width: 5vw;
+    height: 100%;
+    background-color: #1e19168e;
+    z-index: -1;
+    position: fixed;
+}
+
+.rect1 {
+    top: 0;
+    left: 26vw;
+}
+
+.rect2 {
+    top: 0;
+    left: 32vw;
+}
+
+.rect3 {
+    top: 0;
+    left: 38vw;
+}
+
+.rect4 {
+    top: 0;
+    left: 44vw;
+}
+
+.rect5 {
+    top: 0;
+    left: 50vw;
+}
+
+.rect6 {
+    top: 0;
+    left: 56vw;
+}
+
+.rect7 {
+    top: 0;
+    left: 62vw;
+}
+
+.rect8 {
+    top: 0;
+    left: 68vw;
+}
+
+.rect9 {
+    top: 0;
+    left: 74vw;
+}
+
+.rect10 {
+    top: 0;
+    left: 80vw;
+}
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 426px) {}
+
+@media (min-width: 426px) and (max-width: 769px) {}
+
+@media (min-width: 769px) {
+    /* Style the list */
+
+    .bread-block {
+        padding-left: 170px;
+    }
+
+    ul.breadcrumb {
+        padding: 10px 16px;
+        list-style: none;
+    }
+
+    /* Display list items side by side */
+    ul.breadcrumb li {
+        display: inline;
+        font-size: 18px;
+        color: #E3EDEE;
+        font-family: "Nunito Sans";
+    }
+
+    /* Add a slash symbol (/) before/behind each list item */
+    ul.breadcrumb li+li:before {
+        padding: 8px;
+        content: "/\00a0";
+        color: #E3EDEE;
+        font-family: "Nunito Sans";
+        font-style: normal;
+    }
+
+    /* Add a color to all links inside the list */
+    ul.breadcrumb li a {
+        color: #E3EDEE;
+        font-family: "Nunito Sans";
+        font-style: normal;
+    }
+
+    /* Add a color on mouse-over */
+    ul.breadcrumb li a:hover {
+        color: #9385FF;
+    }
+
+    .current {
+        text-decoration: underline;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .esp-h {
+        width: 120px;
+        height: 28px;
+        transform: skew(-20deg);
+        background: #0C0A09;
+        border-radius: 8px;
+        border: 2px solid #E3EDEE;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .esp-h:hover {
+        background: #A10B24;
+    }
+    .act{
+        background: #A10B24;
+    }
+    .txt {
+        color: #E3EDEE;
+        font-size: 20px;
+        text-decoration: none;
+        font-style: normal;
+        font-family: Impact;
+        text-transform: uppercase;
+        
+    }
+
+    .esper-header{
+        display: grid;
+        width: 800px;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 32vw;
+    }
+    .e1{
+        grid-area: 1/1/2/2;
+    }
+    .e2{
+        grid-area: 1/2/2/3;
+    }
+    .e3{
+        grid-area: 1/3/2/4;
+    }
+    .e4{
+        grid-area: 1/4/2/5;
+    }
+    .e5{
+        grid-area: 1/5/2/6;
+    }
+    .e6{
+        grid-area: 1/6/2/7;
+    }
+
+    .esper-img{
+        padding-left: 43px;
+    }
+
+    .esper-img>img{
+        width: 400px;
+        height: 500px;
+    }
+
+
+
+    .role{
+        width: 90px;
+        height: 32px;
+        transform: skew(-20deg);
+        background: #9385FF;
+        border-radius: 8px;
+        border: 4px solid #E3EDEE;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .role>p{
+        font-size: 16px;
+    }
+
+}

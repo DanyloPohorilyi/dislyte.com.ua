@@ -1,0 +1,1641 @@
+/* скролл
+
+.main {
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    height: 100vh;
+}
+
+.main-1,
+.main-2,
+.espers,
+.main-4 {
+    scroll-snap-align: center;
+}
+*/
+
+@media (min-width: 320px) and (max-width: 426px) {
+    body {
+        background: #0c0a09;
+        width: 100%;
+    }
+
+    .dot1 {
+        height: 120px;
+        width: 120px;
+        background-color: #919cb2;
+        opacity: 25%;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        top: 35vw;
+        left: -15vw;
+        filter: blur(30px);
+    }
+
+    .dot2 {
+        height: 120px;
+        width: 120px;
+        background-color: #919cb2;
+        opacity: 25%;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        top: -10vw;
+        left: 10vw;
+        filter: blur(40px);
+    }
+
+    .dot3 {
+        height: 120px;
+        width: 90px;
+        background-color: #a10b24;
+        opacity: 25%;
+        border-radius: 15vw 0 0 15vw;
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        top: -3vw;
+        right: 0;
+        filter: blur(30px);
+    }
+
+    .dot4 {
+        height: 180px;
+        width: 180px;
+        background-color: #a10b24;
+        opacity: 25%;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        top: 100vw;
+        left: 30vw;
+        filter: blur(50px);
+    }
+    .main-1 {
+        padding-top: 5px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .main-1_gif {
+        width: 95%;
+        height: auto;
+        grid-area: 1/1/2/2;
+    }
+
+    .main-1_text {
+        padding-left: 15px;
+        grid-area: 2/1/3/2;
+        display: grid;
+    }
+
+    .main-1_text > h2 {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        grid-area: 1/1/2/2;
+        text-align: center;
+    }
+
+    .main-1_p > p {
+        color: #fff;
+
+        font-family: "Nunito Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    .main-1_p {
+        grid-area: 2/1/3/2;
+        width: 95%;
+    }
+
+    .main-2 {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        padding-top: 50px;
+        overflow: hidden;
+    }
+
+    .main-2 > .content {
+        position: absolute;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .content > .title {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        justify-self: center;
+        text-align: center;
+        grid-area: 1/1/2/2;
+        text-align: center;
+    }
+
+    .content > .text {
+        color: #fff;
+        justify-self: center;
+        text-align: center;
+        font-family: "Nunito Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        grid-area: 2/1/3/2;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .content > .button {
+        grid-area: 3/1/4/2;
+        justify-self: center;
+        margin-top: 20px;
+        background-color: #a10b24;
+        border-radius: 50px;
+        border-color: #a10b24;
+        padding: 12.5px 57px 12.5px 57px;
+        color: #fff;
+        border-width: 0px;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        filter: drop-shadow(0px 8px 16px rgba(145, 156, 178, 0.25));
+        transition: all 0.3s ease-out;
+    }
+
+    .main-2 > video {
+        position: relative;
+        width: 95%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        justify-self: center;
+        border-radius: 50px;
+    }
+
+    .main-2 > .layout {
+        position: absolute;
+        width: 95%;
+        height: 100vh;
+        background: rgba(0, 0, 0.9, 0.85);
+        justify-self: center;
+        border-radius: 50px;
+    }
+
+    .espers {
+        display: grid;
+        padding-top: 50px;
+        width: 95%;
+    }
+
+    .espers > .title {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .espers > .cards {
+        width: 100%;
+        justify-self: center;
+        display: grid;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 150px;
+        height: 150px;
+        perspective: 1000px;
+        margin: 4px 4px 4px 4px;
+    }
+
+    .card1 {
+        grid-area: 1/1/2/2;
+    }
+
+    .card1 > .card-inner > .card-front {
+        background-image: url(../img/Clara-Hera.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card1 > .card-inner > .card-back {
+        background: #9385ff;
+    }
+
+    .card2 {
+        grid-area: 1/2/2/3;
+    }
+
+    .card2 > .card-inner > .card-front {
+        background-image: url(../img/Elliot-Thoth.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card2 > .card-inner > .card-back {
+        background: #a08265;
+    }
+
+    .card3 {
+        grid-area: 2/1/3/2;
+    }
+
+    .card3 > .card-inner > .card-front {
+        background-image: url(../img/Gaius-Zeus.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card3 > .card-inner > .card-back {
+        background: #2d3241;
+    }
+
+    .card4 {
+        grid-area: 2/2/3/3;
+    }
+
+    .card4 > .card-inner > .card-front {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card4 > .card-inner > .card-back {
+        background: #a10b24;
+    }
+
+    .card5 {
+        grid-area: 3/1/4/2;
+    }
+
+    .card5 > .card-inner > .card-front {
+        background-image: url(../img/Leon-Vali.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card5 > .card-inner > .card-back {
+        background: #a10b24;
+    }
+
+    .card6 {
+        grid-area: 3/2/4/3;
+    }
+
+    .card6 > .card-inner > .card-front {
+        background-image: url(../img/Yuuhime-Izanami.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card6 > .card-inner > .card-back {
+        background: #a10b24;
+    }
+
+    .card7 {
+        grid-area: 4/1/5/2;
+    }
+
+    .card7 > .card-inner > .card-front {
+        background-image: url(../img/LuoYan-YanluoWang.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card7 > .card-inner > .card-back {
+        background: #a10b24;
+    }
+
+    .card8 {
+        grid-area: 4/2/5/3;
+    }
+
+    .card8 > .card-inner > .card-front {
+        background-image: url(../img/Sally-Sif.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card8 > .card-inner > .card-back {
+        background: #fce389;
+    }
+
+    .card8 > .card-inner > .card-back > p,
+    .card8 > .card-inner > .card-back > .card-a > p {
+        color: #0c0a09;
+    }
+
+    .card-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.999s;
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    .card-front {
+        background-color: #6a2c70;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        border: 0px;
+        justify-content: center;
+        font-size: 24px;
+        transform: rotateY(0deg);
+    }
+
+    .card-back {
+        color: #fff;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        transform: rotateY(180deg);
+        box-shadow: -0.5px -0.5px 8px 3px #888888;
+    }
+
+    .card-back > p {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        justify-self: center;
+        text-align: center;
+        grid-area: 1/1/2/2;
+    }
+
+    .card-a {
+        grid-area: 2/1/3/2;
+        display: grid;
+        align-items: center;
+        transition: all 0.9s ease-in-out;
+
+        justify-content: center;
+    }
+
+    .card-a > p {
+        color: #e3edee;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-transform: uppercase;
+        justify-self: center;
+        text-align: center;
+        grid-area: 1/1/2/2;
+    }
+
+    .card-a > .arr {
+        width: 24px;
+        height: 16px;
+        grid-area: 1/2/2/3;
+        padding-left: 10px;
+    }
+
+    .card-a > .arr2 {
+        display: none;
+        width: 24px;
+        height: 16px;
+        grid-area: 1/2/2/3;
+        padding-left: 20px;
+    }
+
+    .card-a:hover > .arr2 {
+        display: flex;
+    }
+
+    .card-a:hover > .arr {
+        display: none;
+    }
+
+    .card-a:hover > p {
+        font-style: bold;
+        font-weight: 600;
+    }
+
+    .c1 > .card-back {
+        background-color: #9385ff;
+    }
+
+    .espers > .button-block {
+        justify-self: center;
+    }
+
+    .espers > .button-block > .button {
+        grid-area: 3/1/4/2;
+        justify-self: center;
+        margin-top: 20px;
+        background-color: #a10b24;
+        border-radius: 50px;
+        border-color: #a10b24;
+        padding: 12.5px 57px 12.5px 57px;
+        color: #fff;
+        border-width: 0px;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        filter: drop-shadow(0px 8px 16px rgba(145, 156, 178, 0.25));
+        transition: all 0.3s ease-out;
+    }
+
+    .main-4 {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        padding-top: 50px;
+    }
+
+    .main-4 > .cards {
+        position: absolute;
+        display: grid;
+        align-items: center;
+        width: 95%;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .cards > .title {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        grid-area: 1/1/2/2;
+        text-align: center;
+    }
+
+    .cards > .text {
+        color: #fff;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        grid-area: 2/1/3/2;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .main-4 > video {
+        position: relative;
+        width: 95%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: 25%;
+        justify-self: center;
+        border-radius: 50px;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+    body {
+        background: #0c0a09;
+        width: 100%;
+    }
+
+    .dot1 {
+        height: 220px;
+        width: 220px;
+        background-color: #919cb2;
+        opacity: 25%;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        top: 15vw;
+        left: -15vw;
+        filter: blur(70px);
+    }
+
+    .dot2 {
+        height: 220px;
+        width: 220px;
+        background-color: #919cb2;
+        opacity: 25%;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        top: -15vw;
+        left: 28vw;
+        filter: blur(80px);
+    }
+
+    .dot3 {
+        height: 320px;
+        width: 200px;
+        background-color: #a10b24;
+        opacity: 25%;
+        border-radius: 15vw 0 0 15vw;
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        top: -3vw;
+        right: 0;
+        filter: blur(70px);
+    }
+
+    .dot4 {
+        height: 320px;
+        width: 320px;
+        background-color: #a10b24;
+        opacity: 25%;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        top: 60vw;
+        left: 40vw;
+        filter: blur(80px);
+    }
+
+    .main-1 {
+        padding-top: 44px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .main-1_gif {
+        width: 45vw;
+        height: auto;
+        grid-area: 1/1/2/2;
+    }
+
+    .main-1_text {
+        padding-left: 15px;
+        grid-area: 1/2/2/3;
+        display: grid;
+    }
+
+    .main-1_text > h2 {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        grid-area: 1/1/2/2;
+    }
+
+    .main-1_p > p {
+        color: #fff;
+
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .main-1_p {
+        grid-area: 2/1/3/2;
+        width: 95%;
+    }
+
+    .main-2 {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        padding-top: 50px;
+    }
+
+    .main-2 > .content {
+        position: absolute;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .content > .title {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        justify-self: center;
+        text-align: center;
+        grid-area: 1/1/2/2;
+    }
+
+    .content > .text {
+        color: #fff;
+        justify-self: center;
+        text-align: center;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        grid-area: 2/1/3/2;
+        padding-top: 20px;
+    }
+
+    .content > .button {
+        grid-area: 3/1/4/2;
+        justify-self: center;
+        margin-top: 20px;
+        background-color: #a10b24;
+        border-radius: 50px;
+        border-color: #a10b24;
+        padding: 12.5px 57px 12.5px 57px;
+        color: #fff;
+        border-width: 0px;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        filter: drop-shadow(0px 8px 16px rgba(145, 156, 178, 0.25));
+        transition: all 0.3s ease-out;
+    }
+
+    .main-2 > video {
+        position: relative;
+        width: 95%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        justify-self: center;
+        border-radius: 50px;
+    }
+
+    .main-2 > .layout {
+        position: absolute;
+        width: 95%;
+        height: 100vh;
+        background: rgba(0, 0, 0.9, 0.75);
+        justify-self: center;
+        border-radius: 50px;
+    }
+
+    .espers {
+        display: grid;
+        padding-top: 50px;
+        width: 100%;
+    }
+
+    .espers > .cards {
+        width: 95%;
+        justify-self: center;
+        display: grid;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 265px;
+        height: 265px;
+        perspective: 1000px;
+        margin: 8px 8px 8px 8px;
+    }
+
+    .card1 {
+        grid-area: 1/1/2/2;
+    }
+
+    .card1 > .card-inner > .card-front {
+        background-image: url(../img/Clara-Hera.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card1 > .card-inner > .card-back {
+        background: #9385ff;
+    }
+
+    .card2 {
+        grid-area: 1/2/2/3;
+    }
+
+    .card2 > .card-inner > .card-front {
+        background-image: url(../img/Elliot-Thoth.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card2 > .card-inner > .card-back {
+        background: #a08265;
+    }
+
+    .card3 {
+        grid-area: 2/1/3/2;
+    }
+
+    .card3 > .card-inner > .card-front {
+        background-image: url(../img/Gaius-Zeus.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card3 > .card-inner > .card-back {
+        background: #2d3241;
+    }
+
+    .card4 {
+        grid-area: 2/2/3/3;
+    }
+
+    .card4 > .card-inner > .card-front {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card4 > .card-inner > .card-back {
+        background: #a10b24;
+    }
+
+    .card5 {
+        grid-area: 3/1/4/2;
+    }
+
+    .card5 > .card-inner > .card-front {
+        background-image: url(../img/Leon-Vali.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card5 > .card-inner > .card-back {
+        background: #a10b24;
+    }
+
+    .card6 {
+        grid-area: 3/2/4/3;
+    }
+
+    .card6 > .card-inner > .card-front {
+        background-image: url(../img/Yuuhime-Izanami.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card6 > .card-inner > .card-back {
+        background: #a10b24;
+    }
+
+    .card7 {
+        grid-area: 5/1/6/2;
+    }
+
+    .card7 > .card-inner > .card-front {
+        background-image: url(../img/LuoYan-YanluoWang.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card7 > .card-inner > .card-back {
+        background: #a10b24;
+    }
+
+    .card8 {
+        grid-area: 5/2/6/3;
+    }
+
+    .card8 > .card-inner > .card-front {
+        background-image: url(../img/Sally-Sif.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card8 > .card-inner > .card-back {
+        background: #fce389;
+    }
+
+    .card8 > .card-inner > .card-back > p,
+    .card8 > .card-inner > .card-back > .card-a > p {
+        color: #0c0a09;
+    }
+
+    .card-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.999s;
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    .card-front {
+        background-color: #6a2c70;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        border: 0px;
+        justify-content: center;
+        font-size: 24px;
+        transform: rotateY(0deg);
+    }
+
+    .card-back {
+        color: #fff;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        transform: rotateY(180deg);
+        box-shadow: -0.5px -0.5px 8px 3px #888888;
+    }
+
+    .card-back > p {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        justify-self: center;
+        text-align: center;
+        grid-area: 1/1/2/2;
+    }
+
+    .card-a {
+        grid-area: 2/1/3/2;
+        display: grid;
+        align-items: center;
+        transition: all 0.9s ease-in-out;
+
+        justify-content: center;
+    }
+
+    .card-a > p {
+        color: #e3edee;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-transform: uppercase;
+        justify-self: center;
+        text-align: center;
+        grid-area: 1/1/2/2;
+    }
+
+    .card-a > .arr {
+        width: 24px;
+        height: 16px;
+        grid-area: 1/2/2/3;
+        padding-left: 10px;
+    }
+
+    .card-a > .arr2 {
+        display: none;
+        width: 24px;
+        height: 16px;
+        grid-area: 1/2/2/3;
+        padding-left: 20px;
+    }
+
+    .card-a:hover > .arr2 {
+        display: flex;
+    }
+
+    .card-a:hover > .arr {
+        display: none;
+    }
+
+    .card-a:hover > p {
+        font-style: bold;
+        font-weight: 600;
+    }
+
+    .c1 > .card-back {
+        background-color: #9385ff;
+    }
+
+    .espers > .title {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .espers > .button-block {
+        justify-self: center;
+    }
+
+    .espers > .button-block > .button {
+        grid-area: 3/1/4/2;
+        justify-self: center;
+        margin-top: 20px;
+        background-color: #a10b24;
+        border-radius: 50px;
+        border-color: #a10b24;
+        padding: 12.5px 57px 12.5px 57px;
+        color: #fff;
+        border-width: 0px;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        filter: drop-shadow(0px 8px 16px rgba(145, 156, 178, 0.25));
+        transition: all 0.3s ease-out;
+    }
+
+    .espers > .button-block > .button:hover {
+        margin-top: 12px;
+        margin-bottom: 8px;
+        background-color: #ff102f;
+        border-color: #ff102f;
+        padding: 12.5px 77px 12.5px 77px;
+        filter: drop-shadow(0px 8px 16px rgba(145, 156, 178, 0.5));
+    }
+
+    .main-4 {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        padding-top: 50px;
+    }
+
+    .main-4 > .cards {
+        position: absolute;
+        display: grid;
+        align-items: center;
+        width: 50%;
+        justify-self: center;
+        align-self: center;
+        padding-left: 35%;
+    }
+
+    .cards > .title {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        grid-area: 1/1/2/2;
+    }
+
+    .cards > .text {
+        color: #fff;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        grid-area: 2/1/3/2;
+        padding-top: 20px;
+    }
+
+    .main-4 > video {
+        position: relative;
+        width: 95%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        justify-self: center;
+        border-radius: 50px;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        background: #0c0a09;
+        width: 100%;
+    }
+
+    .dot1 {
+        height: 320px;
+        width: 320px;
+        background-color: #919cb2;
+        opacity: 25%;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        top: 15vw;
+        left: -15vw;
+        filter: blur(120px);
+    }
+
+    .dot2 {
+        height: 320px;
+        width: 320px;
+        background-color: #919cb2;
+        opacity: 25%;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        top: -15vw;
+        left: 28vw;
+        filter: blur(120px);
+    }
+
+    .dot3 {
+        height: 320px;
+        width: 320px;
+        background-color: #a10b24;
+        opacity: 25%;
+        border-radius: 15vw 0 0 15vw;
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        top: -3vw;
+        right: 0;
+        filter: blur(80px);
+    }
+
+    .dot4 {
+        height: 320px;
+        width: 320px;
+        background-color: #a10b24;
+        opacity: 25%;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        top: 35vw;
+        left: 50vw;
+        filter: blur(80px);
+    }
+
+    .main-1 {
+        padding-top: 44px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .main-1_gif {
+        width: 45vw;
+        height: auto;
+        grid-area: 1/1/2/2;
+    }
+
+    .main-1_text {
+        padding-left: 15px;
+        grid-area: 1/2/2/3;
+        display: grid;
+    }
+
+    .main-1_text > h2 {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        grid-area: 1/1/2/2;
+    }
+
+    .main-1_p > p {
+        color: #fff;
+
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .main-1_p {
+        grid-area: 2/1/3/2;
+        width: 435px;
+    }
+
+    .main-2 {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        padding-top: 50px;
+    }
+
+    .main-2 > .content {
+        position: absolute;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        height: 85vh;
+        justify-self: center;
+        align-self: center;
+        align-content: center;
+    }
+
+    .content > .title {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        justify-self: center;
+        text-align: center;
+        grid-area: 1/1/2/2;
+    }
+
+    .content > .text {
+        color: #fff;
+        justify-self: center;
+        text-align: center;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        grid-area: 2/1/3/2;
+        padding-top: 20px;
+    }
+
+    .content > .button {
+        grid-area: 3/1/4/2;
+        justify-self: center;
+        margin-top: 20px;
+        background-color: #a10b24;
+        border-radius: 50px;
+        border-color: #a10b24;
+        padding: 12.5px 57px 12.5px 57px;
+        color: #fff;
+        border-width: 0px;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        filter: drop-shadow(0px 8px 16px rgba(145, 156, 178, 0.25));
+        transition: all 0.3s ease-out;
+    }
+
+    .content > .button:hover {
+        margin-top: 12px;
+        margin-bottom: 8px;
+        background-color: #ff102f;
+        border-color: #ff102f;
+        padding: 12.5px 77px 12.5px 77px;
+        filter: drop-shadow(0px 8px 16px rgba(145, 156, 178, 0.5));
+    }
+
+    .main-2 > video {
+        position: relative;
+        width: 85%;
+        height: 85vh;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        justify-self: center;
+        border-radius: 50px;
+    }
+
+    .main-2 > .layout {
+        position: absolute;
+        width: 85%;
+        height: 85vh;
+        background: rgba(0, 0, 0.9, 0.75);
+        justify-self: center;
+        border-radius: 50px;
+    }
+
+    .espers {
+        display: grid;
+        padding-top: 50px;
+        height: 100vh;
+    }
+
+    .espers > .cards {
+        width: 1065px;
+        justify-self: center;
+        display: grid;
+    }
+
+    .card {
+        width: 255px;
+        height: 255px;
+        perspective: 1000px;
+        margin: 8px 8px 8px 8px;
+    }
+
+    .card1 {
+        grid-area: 1/1/2/2;
+    }
+
+    .card1 > .card-inner > .card-front {
+        background-image: url(../img/Clara-Hera.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card1 > .card-inner > .card-back {
+        background: #9385ff;
+    }
+
+    .card2 {
+        grid-area: 1/2/2/3;
+    }
+
+    .card2 > .card-inner > .card-front {
+        background-image: url(../img/Elliot-Thoth.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card2 > .card-inner > .card-back {
+        background: #a08265;
+    }
+
+    .card3 {
+        grid-area: 1/3/2/4;
+    }
+
+    .card3 > .card-inner > .card-front {
+        background-image: url(../img/Gaius-Zeus.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card3 > .card-inner > .card-back {
+        background: #2d3241;
+    }
+
+    .card4 {
+        grid-area: 1/4/2/5;
+    }
+
+    .card4 > .card-inner > .card-front {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card4 > .card-inner > .card-back {
+        background: #a10b24;
+    }
+
+    .card5 {
+        grid-area: 2/1/3/2;
+    }
+
+    .card5 > .card-inner > .card-front {
+        background-image: url(../img/Leon-Vali.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card5 > .card-inner > .card-back {
+        background: #a10b24;
+    }
+
+    .card6 {
+        grid-area: 2/2/3/3;
+    }
+
+    .card6 > .card-inner > .card-front {
+        background-image: url(../img/Yuuhime-Izanami.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card6 > .card-inner > .card-back {
+        background: #a10b24;
+    }
+
+    .card7 {
+        grid-area: 2/3/3/4;
+    }
+
+    .card7 > .card-inner > .card-front {
+        background-image: url(../img/LuoYan-YanluoWang.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card7 > .card-inner > .card-back {
+        background: #a10b24;
+    }
+
+    .card8 {
+        grid-area: 2/4/3/5;
+    }
+
+    .card8 > .card-inner > .card-front {
+        background-image: url(../img/Sally-Sif.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card8 > .card-inner > .card-back {
+        background: #fce389;
+    }
+
+    .card8 > .card-inner > .card-back > p,
+    .card8 > .card-inner > .card-back > .card-a > p {
+        color: #0c0a09;
+    }
+
+    .card-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.999s;
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    .card-front {
+        background-color: #6a2c70;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        border: 0px;
+        justify-content: center;
+        font-size: 24px;
+        transform: rotateY(0deg);
+    }
+
+    .card-back {
+        color: #fff;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        transform: rotateY(180deg);
+        box-shadow: -0.5px -0.5px 8px 3px #888888;
+    }
+
+    .card-back > p {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        justify-self: center;
+        text-align: center;
+        grid-area: 1/1/2/2;
+    }
+
+    .card-a {
+        grid-area: 2/1/3/2;
+        display: grid;
+        align-items: center;
+        transition: all 0.9s ease-in-out;
+
+        justify-content: center;
+    }
+
+    .card-a > p {
+        color: #e3edee;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-transform: uppercase;
+        justify-self: center;
+        text-align: center;
+        grid-area: 1/1/2/2;
+    }
+
+    .card-a > .arr {
+        width: 24px;
+        height: 16px;
+        grid-area: 1/2/2/3;
+        padding-left: 10px;
+    }
+
+    .card-a > .arr2 {
+        display: none;
+        width: 24px;
+        height: 16px;
+        grid-area: 1/2/2/3;
+        padding-left: 20px;
+    }
+
+    .card-a:hover > .arr2 {
+        display: flex;
+    }
+
+    .card-a:hover > .arr {
+        display: none;
+    }
+
+    .card-a:hover > p {
+        font-style: bold;
+        font-weight: 600;
+    }
+
+    .c1 > .card-back {
+        background-color: #9385ff;
+    }
+
+    .espers > .title {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .espers > .button-block {
+        justify-self: center;
+    }
+
+    .espers > .button-block > .button {
+        grid-area: 3/1/4/2;
+        justify-self: center;
+        margin-top: 20px;
+        background-color: #a10b24;
+        border-radius: 50px;
+        border-color: #a10b24;
+        padding: 12.5px 57px 12.5px 57px;
+        color: #fff;
+        border-width: 0px;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        filter: drop-shadow(0px 8px 16px rgba(145, 156, 178, 0.25));
+        transition: all 0.3s ease-out;
+    }
+
+    .espers > .button-block > .button:hover {
+        margin-top: 12px;
+        margin-bottom: 8px;
+        background-color: #ff102f;
+        border-color: #ff102f;
+        padding: 12.5px 77px 12.5px 77px;
+        filter: drop-shadow(0px 8px 16px rgba(145, 156, 178, 0.5));
+    }
+
+    .main-4 {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        padding-top: 50px;
+    }
+
+    .main-4 > .cards {
+        position: absolute;
+        display: grid;
+        align-items: center;
+        width: 35%;
+        justify-self: center;
+        align-items: center;
+        align-content: center;
+        padding-left: 30%;
+        height: 75vh;
+    }
+
+    .cards > .title {
+        color: #e3edee;
+        font-family: Impact;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        grid-area: 1/1/2/2;
+    }
+
+    .cards > .text {
+        color: #fff;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        grid-area: 2/1/3/2;
+    }
+
+    .main-4 > video {
+        position: relative;
+        width: 75%;
+        height: 75vh;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        justify-self: center;
+        border-radius: 50px;
+    }
+}

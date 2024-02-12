@@ -139,8 +139,9 @@ class ElementController extends Controller
      */
     public function destroy(Element $element)
     {
-        if (Storage::disk('public')->exists($element->image->path)) {
-            Storage::disk('public')->delete($element->image->path);
+
+        if (File::exists(public_path($element->image->path))) {
+            File::delete(public_path($element->image->path));
         }
 
         $element->image()->delete();

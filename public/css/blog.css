@@ -1,0 +1,109 @@
+body {
+    background: #0C0A09;
+}
+
+
+@media (min-width: 320px) and (max-width: 426px) {
+    .editing{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        padding-bottom: 25px;
+    }
+    .editing>img{
+        width: 95vw;
+        height: auto;
+        padding-top: 25px;
+    }
+    .editing>h1{
+        font-family: Impact;
+        font-style: none;
+        font-size: 32px;
+        color: white;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+
+        padding-top: 25px;
+    }
+    .editing>p{
+        font-family: "Nunito Sans";
+        font-style: italic;
+        font-size: 20px;
+        color: white;
+        font-weight: 100;
+        text-align: center;
+        text-transform: none;
+        
+        padding-top: 25px;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+    .editing{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        padding-bottom: 100px;
+    }
+    .editing>img{
+        width: 70vw;
+        height: auto;
+    }
+    .editing>h1{
+        font-family: Impact;
+        font-style: none;
+        font-size: 32px;
+        color: white;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+
+        padding-top: 25px;
+    }
+    .editing>p{
+        font-family: "Nunito Sans";
+        font-style: italic;
+        font-size: 20px;
+        color: white;
+        font-weight: 100;
+        text-align: center;
+        text-transform: none;
+        
+        padding-top: 25px;
+    }
+}
+
+@media (min-width: 769px) {
+    .editing{
+        display: grid;
+        justify-content: center;
+        padding-bottom: 100px;
+    }
+    .editing>img{
+        width: 60vw;
+        height: auto;
+    }
+    .editing>h1{
+        font-family: Impact;
+        font-style: none;
+        font-size: 32px;
+        color: white;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+
+        padding-top: 25px;
+    }
+    .editing>p{
+        font-family: "Nunito Sans";
+        font-style: italic;
+        font-size: 20px;
+        color: white;
+        font-weight: 100;
+        text-align: center;
+        text-transform: none;
+        
+        padding-top: 25px;
+    }
+}

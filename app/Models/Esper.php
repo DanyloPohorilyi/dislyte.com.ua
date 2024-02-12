@@ -22,7 +22,7 @@ class Esper extends Model
         'birthday',
         'height',
         'favorites',
-        'identity',
+        'job',
         'affiliation',
         'game_advice',
         'equipment_advice1_id',

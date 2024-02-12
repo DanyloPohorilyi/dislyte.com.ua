@@ -19,7 +19,8 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item ">
-                    <a href="/admin" class="nav-link text-white {{ $active === 'home' ? 'active bg-primary' : '' }}">
+                    <a href="{{ route('adminIndex') }}"
+                        class="nav-link text-white {{ $active === 'home' ? 'active bg-primary' : '' }}">
                         <img src="{{ URL::to('/') }}/images/admin/home.svg" alt="" class="pe-none me-2 mb-1">
                         Home
                     </a>
@@ -31,14 +32,14 @@
                             class="pe-none me-3 ms-1 mt-1">
                         Espers
                     </button>
-                    <div class="collapse show" id="dashboard-collapse">
+                    <div class="collapse close" id="dashboard-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ">
-                            <li><a href="../espers/show.html"
+                            <li><a href="{{ route('espers.index') }}"
                                     class="link-body-emphasis text-white d-inline-flex text-decoration-none rounded {{ $active === 'espers' ? 'bg-primary ps-3 pe-3' : '' }}">
                                     Espers
                                 </a>
                             </li>
-                            <li><a href="show.html"
+                            <li><a href="{{ route('elements.index') }}"
                                     class="link-body-emphasis text-white d-inline-flex text-decoration-none rounded {{ $active === 'elements' ? 'bg-primary ps-3 pe-3' : '' }}">
                                     Element
                                 </a>
@@ -54,7 +55,7 @@
                             <li><a href="#"
                                     class="link-body-emphasis text-white d-inline-flex text-decoration-none rounded {{ $active === 'buff' ? 'bg-primary ps-3 pe-3' : '' }}">
                                     Buff/debuff</a></li>
-                            <li><a href="#"
+                            <li><a href="{{ route('equipment.index') }}"
                                     class="link-body-emphasis text-white d-inline-flex text-decoration-none rounded {{ $active === 'equipment' ? 'bg-primary ps-3 pe-3' : '' }}">Equipment</a>
                             </li>
                             <li><a href="#"
@@ -85,7 +86,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link text-white {{ $active === 'users' ? 'active bg-primary' : '' }}">
+                    <a href="{{ route('users.index') }}"
+                        class="nav-link text-white {{ $active === 'users' ? 'active bg-primary' : '' }}">
                         <img src="{{ URL::to('/') }}/images/admin/person-fill.svg" alt=""
                             class="pe-none me-2 mb-1">
                         Users
@@ -100,7 +102,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="{{ route('managers.index') }}"
                         class="nav-link text-white {{ $active === 'admins' ? 'active bg-primary' : '' }}">
                         <img src="{{ URL::to('/') }}/images/admin/person-admin.svg" alt=""
                             class="pe-none me-2 mb-1">
@@ -130,7 +132,8 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item link-danger link-underline link-underline-opacity-0" href="#">Sign
+                    <li><a class="dropdown-item link-danger link-underline link-underline-opacity-0"
+                            href="{{ route('signOut') }}">Sign
                             out</a></li>
                 </ul>
             </div>
